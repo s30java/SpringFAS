@@ -4,9 +4,14 @@
 package com.fas.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.fas.modal.Users;
 /**
  * @author swaybhase
  * changes for login
@@ -16,15 +21,16 @@ import org.springframework.web.servlet.ModelAndView;
 public class LoginController {
 	
 	
-	@RequestMapping(value = {"/login"}, method = RequestMethod.GET)
-	public ModelAndView getLogin(){
-		ModelAndView modal=new ModelAndView();
+	@RequestMapping(value = {"/showLogin"}, method = RequestMethod.GET)
+	public ModelAndView showLogin(){
 		
-		modal.addObject("message", "Satish");
-		modal.setViewName("login");
-		
-		
-		return modal;
+		return new ModelAndView("login", "users", new Users());
 	}
 
+	@RequestMapping(value = {"/login"}, method = RequestMethod.POST)
+	public ModelAndView authLogin(@ModelAttribute("users") Users user, BindingResult result){
+		System.out.println("username is :: "+user.getUsername());
+		System.out.println("passwqord is :: "+user.getPassword());
+		return new ModelAndView("login", "users", new Users());
+	}
 }
