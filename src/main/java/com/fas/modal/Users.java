@@ -1,14 +1,57 @@
 package com.fas.modal;
 
-public class Users {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+
+@Entity
+@Table(name="USER")
+public class Users {
+	
+	
+	@Id   
+    @GeneratedValue  
+    @Column(name = "user_id")                       
+	 private int id; 
+	
+	@Column(name="username")
 	private String username;
+	
+	@Column(name="password")
 	private String password;
+	
+	 @Column(name="first_name")
 	private String firstname;
+	 
+	 @Column(name="last_name")
     private String lastname;
+	 
+    @Column(name="email")
     private String email;
+    
+    @Column(name="telephone")
     private String telephone;
+    
+    @Column(name="loginname")
     private String loginname;
+    
+    /**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
 	/**
 	 * @return the username
 	 */

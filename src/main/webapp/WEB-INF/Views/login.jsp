@@ -29,7 +29,7 @@
 					</td>
 				</tr>
 
-				<tr><td><form:button name="Submit" class="btn btn-success btn-block">SUBMIT </form:button></td></tr>
+				<tr><td><input type="submit" name="Submit" class="btn btn-success btn-block"></td></tr>
 </table>
 
 </form:form>
