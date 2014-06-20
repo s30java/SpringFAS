@@ -74,16 +74,28 @@ public class UserDaoImpl implements UserDao {
 		
 	}
 	@Transactional
-	public boolean authenticateUser(Users user) {
+	public Users authenticateUser(Users user) {
 		boolean validUser;
+		
 		
 		Query query=sessionFactory.getCurrentSession().createQuery("from Users where username='"+user.getUsername()+"' and password='"+user.getPassword()+"'");
 	if(query.uniqueResult()!=null){
 		validUser=true;
+		List<?> userList=query.list();
+		
+		
+		if(!userList.isEmpty()){
+			user=(Users) userList.get(0);
+			
+			System.out.println("get user data "+user.getFirstname());
+		}
 	}else
 		validUser=false;
 		
-		return validUser;
+	
+	user.setIsValidUser(validUser);
+	
+		return user;
 	}
 
 

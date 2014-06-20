@@ -49,11 +49,11 @@ public class UserServiceImpl implements IUserService {
 	}
 
 
-	public boolean authenticateUser(Users user) {
+	public Users authenticateUser(Users user) {
 		
-		boolean validUser =userDao.authenticateUser(user);
+		Users userBo =userDao.authenticateUser(user);
 		
-		return validUser;
+		return userBo;
 	}
 
 }

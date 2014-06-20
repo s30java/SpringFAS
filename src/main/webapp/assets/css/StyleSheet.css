@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #eee;
+	padding-top: 40px;
+	font: helvetica;
+}
+body > .navbar {
+    font-size: 13px;
+}
+.error {
+	color: red;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+/* for main login page to hide padding top */
+#container{
+	padding-top:0px!important;
+}

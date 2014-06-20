@@ -18,8 +18,8 @@ public class LoginValidator implements Validator{
 	public void validate(Object obj, Errors errors) {
 	//	Users user=(Users)obj;
 		
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "required.error.userName");
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "required.error.passWord");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "required.error.login");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "required.error.login");
 		
 	}
 

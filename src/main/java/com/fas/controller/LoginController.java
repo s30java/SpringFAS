@@ -16,6 +16,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.fas.modal.Users;
@@ -27,6 +28,7 @@ import com.fas.validator.LoginValidator;
  */
 
 @Controller
+@SessionAttributes("userSession")
 public class LoginController {
 	
 	@Autowired
@@ -46,20 +48,28 @@ public class LoginController {
 		LoginValidator validator=new LoginValidator();
 		
 		validator.validate(user, result);
-		boolean validUser=userService.authenticateUser(user);
 		
+		
+		user=userService.authenticateUser(user);
+		
+		modelView.setViewName("login");
 		
 		if (result.hasErrors()) {
 			 message.put("ERR_MESSAGE", "ErrorMessage");
-        }else if(!validUser){
+        }else if(!user.isIsValidUser()){
 			 message.put("INVALID_USER_MESSAGE","INVALID_USER_MESSAGE");
+		}else if(user.isIsValidUser()){
+			/*
+			 * this view will only be set if user is been authenticated
+			 */
+			modelView.setViewName("home");
 		}
 		
 		
-		modelView.setViewName("login");
+		
 		modelView.addObject("users", new Users());
 		modelView.addObject("message",message);
-		
+		modelView.addObject("userSession", user);
 		return modelView;
 	}
 }

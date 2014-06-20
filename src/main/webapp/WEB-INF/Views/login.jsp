@@ -7,18 +7,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="<%=request.getContextPath() %>/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
-<title>FAS</title>
-  <style>
-     body { background-color: #eee; font: helvetica; }
-     
-     .error { color: red; font-size: 0.9em; font-weight: bold; }
-    </style>
-    <script>
-    $(".alert").alert('close')
-    </script>
+<link href="<c:url value="/assets/bootstrap/css/bootstrap.css" />" rel="stylesheet">
+<link href="<c:url value="/assets/css/StyleSheet.css" />" rel="stylesheet">
+ <link rel="shortcut icon" href="<c:url value="/assets/ico/favicon.ico" />">
+<title> :::: Feedback Analysis System ::::</title>
+
 </head>
-<body>
+<body id="container">
 <div class="mainbody">
 <form:form action="login.html" modelAttribute="users" method="post">
 
@@ -39,13 +34,6 @@
 							<span class="add-on"><i class="icon-user"></i></span>
 							<form:input id="username" path="username" placeholder="UserName" />
 						</div>
-						<c:if test="${message.ERR_MESSAGE != null}">
-							<div class="alert">
-								<a href="#" class="close" data-dismiss="alert">&times;</a>
-								<form:errors path="username" cssClass="error" />
-							</div>
-						</c:if>
-						
 					</td>
 				</tr>
 				<tr>

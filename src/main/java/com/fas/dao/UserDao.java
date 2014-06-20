@@ -11,5 +11,5 @@ public interface UserDao {
 	public void deleteUser(int id);
 	public Users getUser(int id);
 	public void updateUser(Users user);
-	public boolean authenticateUser(Users user);
+	public Users authenticateUser(Users user);
 }

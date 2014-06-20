@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 
 @Entity
@@ -12,6 +13,18 @@ import javax.persistence.Table;
 public class Users {
 	
 	
+	/**
+	 * @return the isValidUser
+	 */
+	public boolean isIsValidUser() {
+		return IsValidUser;
+	}
+	/**
+	 * @param isValidUser the isValidUser to set
+	 */
+	public void setIsValidUser(boolean isValidUser) {
+		IsValidUser = isValidUser;
+	}
 	@Id   
     @GeneratedValue  
     @Column(name = "user_id")                       
@@ -38,6 +51,8 @@ public class Users {
     @Column(name="loginname")
     private String loginname;
     
+    @Transient
+    private boolean IsValidUser;
     /**
 	 * @return the id
 	 */
