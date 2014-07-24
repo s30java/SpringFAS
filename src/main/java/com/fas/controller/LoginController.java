@@ -28,7 +28,7 @@ import com.fas.validator.LoginValidator;
  */
 
 @Controller
-@SessionAttributes("userSession")
+@SessionAttributes("userContext")
 public class LoginController {
 	
 	@Autowired
@@ -69,7 +69,7 @@ public class LoginController {
 		
 		modelView.addObject("users", new Users());
 		modelView.addObject("message",message);
-		modelView.addObject("userSession", user);
+		modelView.addObject("userContext", user);
 		return modelView;
 	}
 }
