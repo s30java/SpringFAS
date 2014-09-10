@@ -34,12 +34,16 @@ public class LoginController {
 	@Autowired
 	private IUserService userService;
 	
+	//Loads the first page
 	@RequestMapping(value = {"/showLogin"}, method = RequestMethod.GET)
 	public ModelAndView showLogin(){
 		
 		return new ModelAndView("login", "users", new Users());
 	}
-
+	
+	
+	
+	//Used to authenticate the users 
 	@RequestMapping(value = {"/login"}, method = RequestMethod.POST)
 	public ModelAndView authLogin(@ModelAttribute("users") Users user, BindingResult result){
 		
@@ -48,7 +52,6 @@ public class LoginController {
 		LoginValidator validator=new LoginValidator();
 		
 		validator.validate(user, result);
-		
 		
 		user=userService.authenticateUser(user);
 		
@@ -64,9 +67,6 @@ public class LoginController {
 			 */
 			modelView.setViewName("home");
 		}
-		
-		
-		
 		modelView.addObject("users", new Users());
 		modelView.addObject("message",message);
 		modelView.addObject("userContext", user);

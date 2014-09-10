@@ -4,144 +4,128 @@
     <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+   <title> :::: Feedback Analysis System ::::</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+
+    <!-- Le styles -->
 <link href="<c:url value="/assets/bootstrap/css/bootstrap.css" />" rel="stylesheet">
 <link href="<c:url value="/assets/css/StyleSheet.css" />" rel="stylesheet">
  <link rel="shortcut icon" href="<c:url value="/assets/ico/favicon.ico" />">
-<title> :::: Feedback Analysis System ::::</title>
+ <link href="<c:url value="/assets/bootstrap/css/bootstrap-responsive.css" />" rel="stylesheet"> 
+  </head>
 
-</head>
-<body>
+  <body>
+
+
 <jsp:include page="header.jsp"></jsp:include>
-<h2>Hi ${userSession.firstname}</h2>
-<p>The sidebar is displayed on the left edge of the page below the site logo (if using the MonoBook skin or the default Vector skin since MediaWiki 1.16). This sidebar gives you access to important pages in the wiki such as Recent Changes or Upload File.
-Navigation
 
-Clicking on the logo brings you back to the main page of the wiki. The links in the navigation section just below will take you to important pages of the wiki. These links can be configured by site administrators.
 
-Toolbox
-
-The tools contains a selection of links which change depending on what type of page you are viewing.
-
-On all pages (except special pages)
-
-        “What links here” takes you to a special page that lists the pages on this wiki which contain a link to the current page. This is helpful when you are looking for pages of related information. The “what links here” information can also be useful when you are refactoring wiki pages and need to check whether links to this page are still relevant after changes in the current page.
-        The “related changes” tool lists all recent changes in the pages linked to from the current page. Recent changes to all relevant template pages are included in the resulting page list. The "Hide minor edits" option that can be set in the user preferences applies, among other things, to “related changes”.
-
-On all pages (including special pages)
-
-        “Upload file” displays a special page that allows logged-in users to upload images and other files to the wiki. Uploaded files can be linked from or embedded in wiki pages. Uploading files, viewing files on the server, including them in wiki pages and managing the uploaded files is discussed in the managing files section of this manual. This is not displayed if file uploading is not enabled.
-        The “special pages” tool lists the MediaWiki special pages. In MediaWiki terminology, a special page is one that presents information about the Wiki and/or allows access to administration activities for the wiki. For example, a list of users registered with the wiki, statistics about the wiki such as the number of pages and number of page edits, system logs, a list of orphaned pages, and so on. These special pages are commonly generated when the special page is loaded rather than being stored in the wiki database.
-        The function and use of the default special pages can be found in the special pages section of this manual.
-
-Page Tabs
-Default page tabs at the top of the page
-
-The page tabs are displayed at the top of the page to the right of the site logo (if using the MonoBook skin or the default Vector skin since MediaWiki 1.16). These tabs allow you to perform actions or view pages that are related to the current page. The available default actions include: viewing, editing, and discussing the current page. The specific tabs displayed on your pages depend on whether or not you are logged into the wiki and whether you have sysop (administrator) privileges on the wiki. On special pages only the namespace tab is displayed.
-
-Default for all users
-
-        “namespace” (page, help, special page, template, user page etc.)
-        “discussion”
-        “edit” (may read “view source” if anonymous editing is disabled, the page is in the MediaWiki: namespace, or the page is protected)
-        “history”
-
-Extra tabs for logged-in users
-
-        “move”
-        “watch”
-
-Extra tabs for sysops
-
-        “protect”
-        “delete”
-
-Administrators can add or remove tabs by using JavaScript or installing extensions, so the tabs you see may be different depending on which wiki you are using.
-User Links
-Default user links at the top right of the page
-
-The user links are displayed at the top far right of the page (if using the default Vector skin). These tabs allow the logged-in user to view and edit their user page and wiki preferences. Additionally, the user links allow the user to quickly access their contributions to the wiki and logout.
-
-For anonymous users the user links is replaced by a link to the wiki login page or, if enabled, a link to your IP address and your IP address's talk page.
-
-“<username>”
-    This links to your user page which is where you can put information about yourself, store bits of information you want to remember or whatever else you fancy.
-“talk”
-    This links to your discussion page, where people can leave messages for you.
-“preferences”
-    Allows you to change your personal site preferences.
-“watchlist”
-    A list of all pages that you are watching. Pages can be added to this list by clicking “watch” at the top of the page.
-“contributions”
-    A list of all contributions you have made to the wiki.
-“log out”
-    Click this link to log out of the wiki. 
+    <!-- showcase part
     
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="<c:url value="/assets/bootstrap/img/slide-01.jpg" />" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Customer Contact Department</h1>
+              <p class="lead">To maintain the above Question Bank, to close/re-open survey, e-mail campaigns, to maintain customer enquiry feedback etc.</p>
+             
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="<c:url value="/assets/bootstrap/img/slide-02.jpg" />" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Sales and Marketing Teams</h1>
+              <p class="lead">Team will maintain product details through the system which in turn will be accessed by the registered customers and to upload customer survey.</p>
+             <!--  <a class="btn btn-large btn-primary" href="#">Learn more</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="<c:url value="/assets/bootstrap/img/slide-03.jpg" />" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Product / Service Design Teams and Senior Management</h1>
+              <p class="lead">To get Analytical reports like Productwise Feedback, Customerwise feedback, Survey Analysis-etc.</p>
+              <!-- <a class="btn btn-large btn-primary" href="#">Browse gallery</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+
+
+
+   
+   <!--  ================================================== -->
     
-    The sidebar is displayed on the left edge of the page below the site logo (if using the MonoBook skin or the default Vector skin since MediaWiki 1.16). This sidebar gives you access to important pages in the wiki such as Recent Changes or Upload File.
-Navigation
 
-Clicking on the logo brings you back to the main page of the wiki. The links in the navigation section just below will take you to important pages of the wiki. These links can be configured by site administrators.
+    <div class="container marketing">
 
-Toolbox
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Customer Contact Department</h2>
+          <p>To maintain Question Bank, Time to time define various surveys, close/re-open survey.</p>
+          <p><a class="btn" href="#">Validate Feedback &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Sales and Marketing Teams</h2>
+          <p>Team will maintain product details through the system which in turn will be accessed by the registered customers and to upload customer survey.</p>
+          <p><a class="btn" href="ShowSalesDept.html">Upload Survey&raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle" data-src="holder.js/140x140">
+          <h2>Product and Senior Management</h2>
+          <p>Get Analytics reports to showcase.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
 
-The tools contains a selection of links which change depending on what type of page you are viewing.
 
-On all pages (except special pages)
+      <!-- START THE FEATURETTES -->
 
-        “What links here” takes you to a special page that lists the pages on this wiki which contain a link to the current page. This is helpful when you are looking for pages of related information. The “what links here” information can also be useful when you are refactoring wiki pages and need to check whether links to this page are still relevant after changes in the current page.
-        The “related changes” tool lists all recent changes in the pages linked to from the current page. Recent changes to all relevant template pages are included in the resulting page list. The "Hide minor edits" option that can be set in the user preferences applies, among other things, to “related changes”.
+      <hr class="featurette-divider">
+      
+      <!-- /END THE FEATURETTES -->
 
-On all pages (including special pages)
 
-        “Upload file” displays a special page that allows logged-in users to upload images and other files to the wiki. Uploaded files can be linked from or embedded in wiki pages. Uploading files, viewing files on the server, including them in wiki pages and managing the uploaded files is discussed in the managing files section of this manual. This is not displayed if file uploading is not enabled.
-        The “special pages” tool lists the MediaWiki special pages. In MediaWiki terminology, a special page is one that presents information about the Wiki and/or allows access to administration activities for the wiki. For example, a list of users registered with the wiki, statistics about the wiki such as the number of pages and number of page edits, system logs, a list of orphaned pages, and so on. These special pages are commonly generated when the special page is loaded rather than being stored in the wiki database.
-        The function and use of the default special pages can be found in the special pages section of this manual.
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
 
-Page Tabs
-Default page tabs at the top of the page
+    </div>
 
-The page tabs are displayed at the top of the page to the right of the site logo (if using the MonoBook skin or the default Vector skin since MediaWiki 1.16). These tabs allow you to perform actions or view pages that are related to the current page. The available default actions include: viewing, editing, and discussing the current page. The specific tabs displayed on your pages depend on whether or not you are logged into the wiki and whether you have sysop (administrator) privileges on the wiki. On special pages only the namespace tab is displayed.
 
-Default for all users
 
-        “namespace” (page, help, special page, template, user page etc.)
-        “discussion”
-        “edit” (may read “view source” if anonymous editing is disabled, the page is in the MediaWiki: namespace, or the page is protected)
-        “history”
-
-Extra tabs for logged-in users
-
-        “move”
-        “watch”
-
-Extra tabs for sysops
-
-        “protect”
-        “delete”
-
-Administrators can add or remove tabs by using JavaScript or installing extensions, so the tabs you see may be different depending on which wiki you are using.
-User Links
-Default user links at the top right of the page
-
-The user links are displayed at the top far right of the page (if using the default Vector skin). These tabs allow the logged-in user to view and edit their user page and wiki preferences. Additionally, the user links allow the user to quickly access their contributions to the wiki and logout.
-
-For anonymous users the user links is replaced by a link to the wiki login page or, if enabled, a link to your IP address and your IP address's talk page.
-
-“<username>”
-    This links to your user page which is where you can put information about yourself, store bits of information you want to remember or whatever else you fancy.
-“talk”
-    This links to your discussion page, where people can leave messages for you.
-“preferences”
-    Allows you to change your personal site preferences.
-“watchlist”
-    A list of all pages that you are watching. Pages can be added to this list by clicking “watch” at the top of the page.
-“contributions”
-    A list of all contributions you have made to the wiki.
-“log out”
-    Click this link to log out of the wiki. </p>
-</body>
+    <!-- ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="<c:url value="/assets/bootstrap/js/jquery.js" />"></script>
+    <script src="<c:url value="/assets/bootstrap/js/bootstrap-carousel.js" />"></script>
+    <script src="<c:url value="/assets/bootstrap/js/bootstrap-dropdown.js" />"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="<c:url value="/assets/bootstrap/js/holder.js" />"></script>
+  </body>
 </html>
