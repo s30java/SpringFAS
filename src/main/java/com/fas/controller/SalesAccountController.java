@@ -15,10 +15,15 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class SalesAccountController {
 
-	
+	/**
+	 *mapping to show the sales page at initial startup 
+	 * @return
+	 */
 	@RequestMapping(value = {"/ShowSalesDept"},method = RequestMethod.GET)
 	public ModelAndView showSalesView(){
 		
-		return new ModelAndView("sales_HomeView");
+		return new ModelAndView("SalesView/sales_HomeView");
 	}
+	
+	
 }

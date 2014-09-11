@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -33,6 +35,9 @@ public class LoginController {
 	
 	@Autowired
 	private IUserService userService;
+	
+	private final Logger LOG = LoggerFactory.getLogger(LoginController.class);
+	
 	
 	//Loads the first page
 	@RequestMapping(value = {"/showLogin"}, method = RequestMethod.GET)
@@ -72,4 +77,22 @@ public class LoginController {
 		modelView.addObject("userContext", user);
 		return modelView;
 	}
+	
+	@RequestMapping(value = {"/login"}, method = RequestMethod.GET)
+	public ModelAndView authLoginGET(@ModelAttribute("userContext") Users user){
+		
+		LOG.info("USER SESSION VALIDATE :::  "+user.getId());
+		
+		/*if (result.hasErrors()) {
+			 message.put("ERR_MESSAGE", "ErrorMessage");
+       }else if(!user.isIsValidUser()){
+			 message.put("INVALID_USER_MESSAGE","INVALID_USER_MESSAGE");
+		}else if(user.isIsValidUser()){
+			
+			modelView.setViewName("home");
+		}*/
+		return new ModelAndView("home", "users", new Users());
+		
+	}
+	
 }

@@ -16,7 +16,6 @@
 			<artifactId>javax.mail</artifactId>
 			<version>1.4.5</version>
 		</dependency>
-
 		<!-- DB related dependencies -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
