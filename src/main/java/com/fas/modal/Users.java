@@ -12,18 +12,20 @@ import javax.persistence.Transient;
 @Table(name="USER")
 public class Users {
 	
+    @Transient
+    private boolean isValidUser;
 	
 	/**
 	 * @return the isValidUser
 	 */
-	public boolean isIsValidUser() {
-		return IsValidUser;
+	public boolean isValidUser() {
+		return isValidUser;
 	}
 	/**
 	 * @param isValidUser the isValidUser to set
 	 */
-	public void setIsValidUser(boolean isValidUser) {
-		IsValidUser = isValidUser;
+	public void setValidUser(boolean isValidUser) {
+		this.isValidUser = isValidUser;
 	}
 	@Id   
     @GeneratedValue  
@@ -51,8 +53,7 @@ public class Users {
     @Column(name="loginname")
     private String loginname;
     
-    @Transient
-    private boolean IsValidUser;
+
     /**
 	 * @return the id
 	 */

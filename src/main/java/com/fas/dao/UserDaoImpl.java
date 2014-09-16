@@ -93,7 +93,7 @@ public class UserDaoImpl implements UserDao {
 		validUser=false;
 		
 	
-	user.setIsValidUser(validUser);
+	user.setValidUser(validUser);
 	
 		return user;
 	}
