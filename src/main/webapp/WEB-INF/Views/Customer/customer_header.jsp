@@ -27,7 +27,7 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li class="active"><a href="revisit.html">Home</a></li>
+                <li class="active"><a href="home.html">Home</a></li>
                 <li><a href="#about">Send Email to sales</a></li>
                 <li><a href="#contact">Survey</a></li>
                  <li><a href="#contact">Question</a></li>

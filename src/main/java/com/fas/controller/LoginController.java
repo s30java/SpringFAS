@@ -42,7 +42,7 @@ public class LoginController {
 	
 	//Loads the first page
 	@ModelAttribute("userContext")
-	@RequestMapping(value = { "/revisit" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/home" }, method = RequestMethod.GET)
 	public ModelAndView startApp(@ModelAttribute("userContext") Users user) {
 
 		LOG.info("Coming into startApp ");

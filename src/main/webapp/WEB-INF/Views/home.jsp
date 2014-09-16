@@ -80,7 +80,7 @@
           <img class="img-circle" data-src="holder.js/140x140">
           <h2>Customer Contact Department</h2>
           <p>To maintain Question Bank, Time to time define various surveys, close/re-open survey.</p>
-          <p><a class="btn" href="#">Validate Feedback &raquo;</a></p>
+          <p><a class="btn" href="ShowCustDept.html">Validate Feedback &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140">

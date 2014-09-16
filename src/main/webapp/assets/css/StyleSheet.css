@@ -2,7 +2,7 @@
 
 body {
 	font: helvetica;
-	background-color: #CCCCCC;
+/*background-color: #CCCCCC;*/
 }
 
 .error {
@@ -11,7 +11,32 @@ body {
 	font-weight: bold;
 }
 
+.mainbody{
+    margin: 10% auto 20px;
+}
 
+.mainblock-cust{
+
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    margin-top: 100px;
+    padding: 60px;
+}
+
+.bs-docs-example {
+   background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 15px 0;
+    padding: 5px 19px 14px;
+    position: relative;
+}
+
+.add-banner {
+  background: url(../ico/add_plus-48.png) no-repeat;
+}
  /* GLOBAL STYLES
     -------------------------------------------------- */
     /* Padding below the footer and lighter body text */
