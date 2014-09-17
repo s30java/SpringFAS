@@ -35,7 +35,22 @@ body {
 }
 
 .add-banner {
-  background: url(../ico/add_plus-48.png) no-repeat;
+  background: url(../ico/Add-question-48.png) no-repeat;
+}
+
+.img-customer {
+  background: url(../ico/customer.png) no-repeat;
+   margin-left: 30%;
+}
+
+.img-sales {
+  background: url(../ico/Salesman-128.png) no-repeat;
+     margin-left: 30%;
+}
+
+.img-product {
+  background: url(../ico/ico-Product-128.png) no-repeat;
+     margin-left: 30%;
 }
  /* GLOBAL STYLES
     -------------------------------------------------- */

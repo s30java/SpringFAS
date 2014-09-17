@@ -46,6 +46,8 @@ public class LoginController {
 	public ModelAndView startApp(@ModelAttribute("userContext") Users user) {
 
 		LOG.info("Coming into startApp ");
+		
+	
 		return helperApps.IsUserRevisited(user);
 	}
 

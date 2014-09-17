@@ -14,17 +14,23 @@
 
 </head>
 <body id="container">
-<div class="mainbody">
+<div >
 <form:form action="login.html" modelAttribute="users" method="post">
 
-<table align="center" >
+<table class="mainbody" align="center" >
 				<c:if test="${message.INVALID_USER_MESSAGE != null}">
 							<div class="alert alert-error">
 								<a href="#" class="close" data-dismiss="alert">&times;</a>
 								<spring:message code="invalid.user.credentials" text="default text" />
 							</div>
 						</c:if>
-
+				<c:if test="${message.ERR_MESSAGE != null}">
+								<div class="alert alert-error">
+									 <a href="#" class="close" data-dismiss="alert">&times;</a>
+									 <spring:message code="required.error.login" text="default text" />
+									<%-- <form:errors path="password" cssClass="error" /> --%>
+								</div>
+							</c:if>
 				<tr><td><h2>Please Sign In</h2></td></tr>
     
 				<tr>
@@ -42,12 +48,7 @@
 							<span class="add-on"><i class=" icon-eye-open"></i></span>
 							<form:password path="password" placeholder="Password" />
 						</div>
-							<c:if test="${message.ERR_MESSAGE != null}">
-								<div class="alert">
-									 <a href="#" class="close" data-dismiss="alert">&times;</a>
-									<form:errors path="password" cssClass="error" />
-								</div>
-							</c:if>
+							
 					</td>
 				</tr>
 

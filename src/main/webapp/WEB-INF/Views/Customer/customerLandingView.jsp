@@ -26,15 +26,13 @@
 <jsp:include page="customer_header.jsp"></jsp:include>
 
 
-    <!-- showcase part
-    
-    ================================================== -->
+    <!-- showcase part==================TABLE PART================================ -->
 	<div class="container">
 		<div class="mainblock-cust">
 			
 			<ul class="media-list">
 			<li class="media">
-                <a href="#" class="pull-right">
+                <a href="createBank.html" title="click here to add question bank !!" role="button" class="pull-right" data-toggle="modal">
                   <img  class="media-object add-banner " style="width: 48px; height: 48px;" >
                 </a>
                 <div class="media-body">
@@ -92,7 +90,10 @@
 
 
 	<!-- ================================================== -->
+	
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<c:url value="/assets/bootstrap/js/jquery.js" />"></script>
+<%--      <script src="<c:url value="/assets/bootstrap/js/bootstrap-modal.js" />"></script>
+     <script src="<c:url value="/assets/bootstrap/js/bootstrap-transition.js" />"></script> --%>
   </body>
 </html>

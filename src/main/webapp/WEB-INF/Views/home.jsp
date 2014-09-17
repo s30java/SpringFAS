@@ -76,20 +76,30 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
+      
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
+				<div>
+					<img class="media-object img-customer" style="width: 128px; height: 128px;">
+				</div>
+				<img class="img-circle" >
           <h2>Customer Contact Department</h2>
           <p>To maintain Question Bank, Time to time define various surveys, close/re-open survey.</p>
           <p><a class="btn" href="ShowCustDept.html">Validate Feedback &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
+       			 <div>
+						<img class="media-object img-sales" style="width: 128px; height: 128px;">
+				</div>
+          <img class="img-circle" >
           <h2>Sales and Marketing Teams</h2>
           <p>Team will maintain product details through the system which in turn will be accessed by the registered customers and to upload customer survey.</p>
           <p><a class="btn" href="ShowSalesDept.html">Upload Survey&raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
+        		 <div>
+						<img class="media-object img-product" style="width: 128px; height: 128px;">
+				</div>
+          <img class="img-circle">
           <h2>Product and Senior Management</h2>
           <p>Get Analytics reports to showcase.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>

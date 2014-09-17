@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
  * 
  * @author swaybhase
  *
- * Class to  perform operation for customer survey dept
+ * Class to  perform operation for customer survey dept 
  */
 @Controller
 public class CustomerAccountController {
@@ -21,10 +21,20 @@ public class CustomerAccountController {
 	 * @return
 	 */
 	@RequestMapping(value = {"/ShowCustDept"},method = RequestMethod.GET)
-	public ModelAndView showSalesView(){
+	public ModelAndView showCustHomeView(){
 		
 		return new ModelAndView("Customer/customerLandingView");
 	}
 	
+	
+	/**
+	 *mapping to show the question and create questions there
+	 * @return
+	 */
+	@RequestMapping(value = {"/ShowCustDept"},method = RequestMethod.GET)
+	public ModelAndView showQuesBank(){
+		
+		return new ModelAndView("Customer/questionBankView");
+	}
 
 }
