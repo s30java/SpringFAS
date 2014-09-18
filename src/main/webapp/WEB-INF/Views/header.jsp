@@ -7,6 +7,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le styles -->
+<link href="<c:url value="/assets/bootstrap/css/bootstrap.css" />" rel="stylesheet">
+<link href="<c:url value="/assets/css/StyleSheet.css" />" rel="stylesheet">
+ <link rel="shortcut icon" href="<c:url value="/assets/ico/favicon.ico" />">
+ <link href="<c:url value="/assets/bootstrap/css/bootstrap-responsive.css" />" rel="stylesheet"> 
 </head>
 <body>
     <!-- NAVBAR

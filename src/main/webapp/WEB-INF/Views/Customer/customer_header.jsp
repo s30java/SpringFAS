@@ -6,6 +6,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <!-- Le styles -->
+<link href="<c:url value="/assets/bootstrap/css/bootstrap.css" />" rel="stylesheet">
+<link href="<c:url value="/assets/css/StyleSheet.css" />" rel="stylesheet">
+ <link rel="shortcut icon" href="<c:url value="/assets/ico/favicon.ico" />">
+ <link href="<c:url value="/assets/bootstrap/css/bootstrap-responsive.css" />" rel="stylesheet"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -30,7 +35,7 @@
                 <li class="active"><a href="home.html">Home</a></li>
                 <li><a href="#about">Send Email to sales</a></li>
                 <li><a href="#contact">Survey</a></li>
-                 <li><a href="#contact">Question</a></li>
+                 <li><a href="ShowCustDept.html">Question</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->

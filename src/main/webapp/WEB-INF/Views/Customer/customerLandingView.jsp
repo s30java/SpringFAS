@@ -6,33 +6,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-   <title> :::: Feedback Analysis System ::::</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-
-    <!-- Le styles -->
-<link href="<c:url value="/assets/bootstrap/css/bootstrap.css" />" rel="stylesheet">
-<link href="<c:url value="/assets/css/StyleSheet.css" />" rel="stylesheet">
- <link rel="shortcut icon" href="<c:url value="/assets/ico/favicon.ico" />">
- <link href="<c:url value="/assets/bootstrap/css/bootstrap-responsive.css" />" rel="stylesheet"> 
   </head>
 
-  <body>
+  <body class="login-img">
 
 
 <jsp:include page="customer_header.jsp"></jsp:include>
 
 
     <!-- showcase part==================TABLE PART================================ -->
-	<div class="container">
+	<div class="wrap-footer container">
 		<div class="mainblock-cust">
 			
 			<ul class="media-list">
 			<li class="media">
-                <a href="createBank.html" title="click here to add question bank !!" role="button" class="pull-right" data-toggle="modal">
+                <a href="CreateBank.html" title="click here to add question bank !!" role="button" class="pull-right" data-toggle="modal">
                   <img  class="media-object add-banner " style="width: 48px; height: 48px;" >
                 </a>
                 <div class="media-body">
@@ -90,10 +78,9 @@
 
 
 	<!-- ================================================== -->
-	
+	   <jsp:include page="../footer.jsp"></jsp:include>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<c:url value="/assets/bootstrap/js/jquery.js" />"></script>
-<%--      <script src="<c:url value="/assets/bootstrap/js/bootstrap-modal.js" />"></script>
-     <script src="<c:url value="/assets/bootstrap/js/bootstrap-transition.js" />"></script> --%>
+
   </body>
 </html>

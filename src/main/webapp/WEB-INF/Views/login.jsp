@@ -13,12 +13,10 @@
 <title> :::: Feedback Analysis System ::::</title>
 
 </head>
-<body id="container">
+<body id="container" >
 <div >
 <form:form action="login.html" modelAttribute="users" method="post">
-
-<table class="mainbody" align="center" >
-				<c:if test="${message.INVALID_USER_MESSAGE != null}">
+	<c:if test="${message.INVALID_USER_MESSAGE != null}">
 							<div class="alert alert-error">
 								<a href="#" class="close" data-dismiss="alert">&times;</a>
 								<spring:message code="invalid.user.credentials" text="default text" />
@@ -31,29 +29,134 @@
 									<%-- <form:errors path="password" cssClass="error" /> --%>
 								</div>
 							</c:if>
-				<tr><td><h2>Please Sign In</h2></td></tr>
-    
-				<tr>
-					<td>
-					
-					<div class="input-prepend">
-							<span class="add-on"><i class="icon-user"></i></span>
-							<form:input id="username" path="username" placeholder="UserName" />
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="input-prepend">
-							<span class="add-on"><i class=" icon-eye-open"></i></span>
-							<form:password path="password" placeholder="Password" />
-						</div>
 							
+							<table class="mainbody" align="center" >
+							<tr>
+									<td class="separator-left">
+										<table>
+				
+											<tr>
+												<td class="signin"><h2>Sign In</h2></td>
+											</tr>
+				
+											<tr>
+												<td>
+				
+													<div class="input-prepend">
+														<span class="add-on"><i class="icon-user"></i></span>
+														<form:input id="username" path="username"
+															placeholder="UserName" />
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="input-prepend">
+														<span class="add-on"><i class=" icon-eye-open"></i></span>
+														<form:password path="password" placeholder="Password" />
+													</div>
+				
+												</td>
+											</tr>
+				
+											<tr>
+												<td><input type="submit" name="Submit" value="Get Access"
+													class="btn btn-success btn-block"></td>
+											</tr>
+											
+				
+										</table>
+									</td>
+					<td class="separator-right">
+					<table>
+					<tr>
+					<td></td>
+					</tr>
+					</table>
 					</td>
-				</tr>
+									<td>
+									<table class="mainbody" align="center">
+		
+									<tr>
+										<td class="joinus"><h2>Join Us</h2></td>
+									</tr>
+				
+									<tr>
+										<td>
+		
+											<div class="input-prepend">
+												<span class="add-on"><i class="icon-check"></i></span>
+												<form:input id="username" path="username"
+													placeholder="User/loginName" />
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="input-prepend">
+												<span class="add-on"><i class=" icon-eye-open"></i></span>
+												<form:password path="password" placeholder="Password" />
+											</div>
+		
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="input-prepend">
+												<span class="add-on"><i class=" icon-eye-open"></i></span>
+												<form:password path="password" placeholder="Retype-password" />
+											</div>
+		
+										</td>
+									</tr>
+									
+									<tr>
+										<td>
+		
+											<div class="input-prepend">
+												<span class="add-on"><i class="icon-user"></i></span>
+												<form:input id="firstname" path="firstname"
+													placeholder="Firstname" />
+											</div>
+										</td>
+									</tr>
+									
+									
+									<tr>
+										<td>
+		
+											<div class="input-prepend">
+												<span class="add-on"><i class="icon-user"></i></span>
+												<form:input id="lastname" path="lastname"
+													placeholder="Lastname" />
+											</div>
+										</td>
+									</tr>
+									
+									
+									<tr>
+										<td>
+		
+											<div class="input-prepend">
+												<span class="add-on"><i class="icon-map-marker"></i></span>
+												<form:input id="email" path="email"
+													placeholder="@ email" />
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><input type="button" name="Submit"
+											value="Not registered ? register here"
+											class="btn btn-info btn-block"></td>
+									</tr>
+		
+		
+								</table>
+							</td>
+							
+							</tr>
+							</table>
 
-				<tr><td><input type="submit" name="Submit" class="btn btn-success btn-block"></td></tr>
-</table>
 
 </form:form>
 </div>
@@ -63,6 +166,7 @@
     
     <script src="<%=request.getContextPath() %>/assets/bootstrap/js/jquery.js"></script>
      <script src="<%=request.getContextPath() %>/assets/bootstrap/js/bootstrap.min.js"></script>
+      <script src="<c:url value="/assets/bootstrap/js/bootstrap-modal.js" />"></script>
 
 </body>
 </html>

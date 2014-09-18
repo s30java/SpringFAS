@@ -6,21 +6,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+  
    <title> :::: Feedback Analysis System ::::</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-
-    <!-- Le styles -->
-<link href="<c:url value="/assets/bootstrap/css/bootstrap.css" />" rel="stylesheet">
-<link href="<c:url value="/assets/css/StyleSheet.css" />" rel="stylesheet">
- <link rel="shortcut icon" href="<c:url value="/assets/ico/favicon.ico" />">
- <link href="<c:url value="/assets/bootstrap/css/bootstrap-responsive.css" />" rel="stylesheet"> 
   </head>
 
-  <body>
+  <body class="login-img">
 
 
 <jsp:include page="customer_header.jsp"></jsp:include>
@@ -28,7 +19,41 @@
 
     <!-- showcase part==================TABLE PART================================ -->
 	
+ <div class="wrap-footer container ">
+		<div class="mainblock-cust jumbotron">
+			
+           <h1 class="btn btn-primary disabled">Step 1</h1>
+           <form class="form-horizontal">
+    <div class="control-group">
 
+    <label class="control-label" for="questn"> Question bank name</label>
+    <div class="controls">
+    <input type="text" id="inputEmail" placeholder="name">
+    </div>
+    </div>
+    <div class="control-group">
+    <label class="control-label" for="inputPassword"> Question bank description</label>
+    <div class="controls">
+    <textarea placeholder="description"></textarea>
+    </div>
+    </div>
+    <div class="control-group">
+    <div class="controls">
+
+    <button type="submit" class="btn">Go Next >>></button>
+    </div>
+    </div>
+    </form>
+
+         
+        
+		</div>
+
+
+  
+
+     
+    </div>
 
 	<!-- ================================================== -->
 	
@@ -36,5 +61,12 @@
     <script src="<c:url value="/assets/bootstrap/js/jquery.js" />"></script>
 <%--      <script src="<c:url value="/assets/bootstrap/js/bootstrap-modal.js" />"></script>
      <script src="<c:url value="/assets/bootstrap/js/bootstrap-transition.js" />"></script> --%>
+     
+       <!-- FOOTER -->
+        <!-- Part 1: Wrap all page content here -->
+   
+
+    <jsp:include page="../footer.jsp"></jsp:include>
+
   </body>
 </html>

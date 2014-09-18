@@ -31,7 +31,7 @@ public class CustomerAccountController {
 	 *mapping to show the question and create questions there
 	 * @return
 	 */
-	@RequestMapping(value = {"/ShowCustDept"},method = RequestMethod.GET)
+	@RequestMapping(value = {"/CreateBank"},method = RequestMethod.GET)
 	public ModelAndView showQuesBank(){
 		
 		return new ModelAndView("Customer/questionBankView");
