@@ -6,8 +6,10 @@ package com.fas.dao;
 import java.util.List;
 
 
+import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,7 +33,20 @@ public class UserDaoImpl implements UserDao {
 	@Transactional
 	public void saveUser(Users user) {
 		
-		sessionFactory.getCurrentSession().saveOrUpdate(user);
+		try {
+			sessionFactory.getCurrentSession().saveOrUpdate(user);
+		} catch (ConstraintViolationException conVioex) {
+			
+			
+			if (conVioex.getErrorCode() == 1062) {
+				
+			} else if (conVioex.getErrorCode() == 1064) {
+				
+			}
+		}catch(Exception ex){
+			// TODO Auto-generated catch block
+		ex.printStackTrace();
+		}
 		
 	}
 
@@ -53,10 +68,11 @@ public class UserDaoImpl implements UserDao {
 		
 	}
 
+
 	@Transactional
 	public Users getUser(int id) {
 		Users userModel=(Users)sessionFactory.getCurrentSession().get(Users.class,id);
-		System.out.println("in actual implementation for class been defined..............CAME HER IN AGAIN VERSION@");
+		
 		return userModel;
 	}
 
@@ -69,7 +85,7 @@ public class UserDaoImpl implements UserDao {
 		userModel.setFirstname(user.getFirstname());
 		userModel.setLastname(user.getLastname());
 		userModel.setEmail(user.getEmail());
-		userModel.setTelephone(user.getTelephone());
+		
 		sessionFactory.getCurrentSession().update(userModel);
 		
 	}
@@ -78,7 +94,16 @@ public class UserDaoImpl implements UserDao {
 		boolean validUser;
 		
 		
-		Query query=sessionFactory.getCurrentSession().createQuery("from Users where username='"+user.getUsername()+"' and password='"+user.getPassword()+"'");
+		Query query=sessionFactory.getCurrentSession().createQuery("from Users where username=?  and password=?");
+		/*
+		 * is interpreted as a named parameter! So here we actually have to write it as
+
+	    .setParameter("1", 9L)
+		 * 
+		 */
+		query.setParameter(0, user.getUsername());
+		query.setParameter(1, user.getPassword());
+		
 	if(query.uniqueResult()!=null){
 		validUser=true;
 		List<?> userList=query.list();

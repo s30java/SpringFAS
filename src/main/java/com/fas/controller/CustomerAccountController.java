@@ -1,9 +1,14 @@
 package com.fas.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.fas.modal.Users;
 
 
 /**
@@ -16,12 +21,16 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CustomerAccountController {
 
+	private final Logger LOG = LoggerFactory.getLogger(CustomerAccountController.class);
 	/**
 	 *mapping to show the customer page at initial startup 
 	 * @return
 	 */
 	@RequestMapping(value = {"/ShowCustDept"},method = RequestMethod.GET)
-	public ModelAndView showCustHomeView(){
+	public ModelAndView showCustHomeView(@ModelAttribute("userContext") Users user){
+		
+		
+		LOG.info("in customer controller ::::::::::::::::::::::::"+user.getId());
 		
 		return new ModelAndView("Customer/customerLandingView");
 	}

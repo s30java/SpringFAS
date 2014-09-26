@@ -9,7 +9,7 @@ import javax.persistence.Transient;
 
 
 @Entity
-@Table(name="USER")
+@Table(name="user")
 public class Users {
 	
     @Transient
@@ -47,13 +47,11 @@ public class Users {
     @Column(name="email")
     private String email;
     
-    @Column(name="telephone")
-    private String telephone;
-    
-    @Column(name="loginname")
-    private String loginname;
-    
+    @Column(name="usertype")
+    private String usertype;
 
+    @Transient
+    private String rePassword;
     /**
 	 * @return the id
 	 */
@@ -129,28 +127,28 @@ public class Users {
 		this.email = email;
 	}
 	/**
-	 * @return the telephone
+	 * @return the usertype
 	 */
-	public String getTelephone() {
-		return telephone;
+	public String getUsertype() {
+		return usertype;
 	}
 	/**
-	 * @param telephone the telephone to set
+	 * @param usertype the usertype to set
 	 */
-	public void setTelephone(String telephone) {
-		this.telephone = telephone;
+	public void setUsertype(String usertype) {
+		this.usertype = usertype;
 	}
 	/**
-	 * @return the loginname
+	 * @return the repassword
 	 */
-	public String getLoginname() {
-		return loginname;
+	public String getRepassword() {
+		return rePassword;
 	}
 	/**
-	 * @param loginname the loginname to set
+	 * @param repassword the repassword to set
 	 */
-	public void setLoginname(String loginname) {
-		this.loginname = loginname;
+	public void setRepassword(String repassword) {
+		this.rePassword = repassword;
 	}
 	
 }

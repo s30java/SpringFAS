@@ -2,9 +2,12 @@ package com.fas.helper;
 
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.fas.controller.LoginController;
 import com.fas.modal.Users;
 import com.fas.service.IUserService;
 import com.fas.validator.LoginValidator;
@@ -12,7 +15,7 @@ import com.fas.validator.LoginValidator;
 public class HelperControls {
 
 	/**************************LOGIN CONTROLLER HELPER METHODS***************************************/
-	
+	private final Logger LOG = LoggerFactory.getLogger(HelperControls.class);
 	/**
 	 * authenticate user and show appropriate message where required
 	 */
@@ -50,6 +53,7 @@ public class HelperControls {
 	public ModelAndView IsUserRevisited(Users user) {
 		if(user == null) {user = new Users();}
 	       
+	//	LOG.info("helper app ::::::::::::::::::::::::::"+user.getId());
 	       if(user.getId()>0)
 			{
 				return new ModelAndView("home");
